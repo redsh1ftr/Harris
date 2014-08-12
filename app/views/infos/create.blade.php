@@ -1,0 +1,1 @@
+F:\PHP\htdocs\Harris\app/views/infos/create.blade.php

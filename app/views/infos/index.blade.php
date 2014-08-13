@@ -1,1 +1,7 @@
-F:\PHP\htdocs\Harris\app/views/infos/index.blade.php
+@extends('layouts.master')
+
+@section('content')
+
+uiehwughwueghuoh
+
+@stop

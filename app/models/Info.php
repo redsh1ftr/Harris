@@ -8,6 +8,12 @@ class Info extends \Eloquent {
 	];
 
 	// Don't forget to fill this array
-	protected $fillable = [];
+	protected $fillable = [
+			'name',
+			'image_1',
+			'image_2',
+	];
+
+	protected $table = 'infos';
 
 }

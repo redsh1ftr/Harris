@@ -1,6 +1,6 @@
 <?php
 
-class Casket extends \Eloquent {
+class Reflections extends \Eloquent {
 
 	// Add your validation rules here
 	public static $rules = [
@@ -10,20 +10,9 @@ class Casket extends \Eloquent {
 	// Don't forget to fill this array
 	protected $fillable = [
 			'name',
-			'interior',
-			'material',
-			'manufacturer',
-			'group',
-			'price',
-			'cost',
-			'notes',
-			'panel',
-			'vault_size',
 			'image_1',
 			'image_2',
-			'image_3',
 	];
 
-	protected $table = 'caskets';
-
+	protected $table = 'reflections';
 }

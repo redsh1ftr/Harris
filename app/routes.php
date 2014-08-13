@@ -21,4 +21,6 @@ Route::resource('caskets', 'CasketsController');
 
 Route::resource('vaults', 'VaultsController');
 
-Route::resource('info', 'InfosController');
+Route::resource('infos', 'InfosController');
+
+Route::resource('reflections', 'ReflectionsController');

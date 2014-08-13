@@ -8,6 +8,16 @@ class Vault extends \Eloquent {
 	];
 
 	// Don't forget to fill this array
-	protected $fillable = [];
+	protected $fillable = [
+			'name',
+			'liner',
+			'description',
+			'price',
+			'image_1',
+			'image_2',
+			'image_3',
+	];
 
+
+	protected $table = 'vaults';
 }

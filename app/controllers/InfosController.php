@@ -31,14 +31,19 @@ class InfosController extends \BaseController {
 	 */
 	public function store()
 	{
-		$validator = Validator::make($data = Input::all(), Info::$rules);
+			if(Input::file('image_1')){
+				$newfile = str_random(124);
+				$file = Input::file('image_1'); // your file upload input field in the form should be named 'file'
+				$destinationPath = 'images/';
+				$filename = $file->getClientOriginalExtension($file);
+				//$extension =$file->getClientOriginalExtension(); //if you need extension of the file
+				$uploadSuccess = Input::file('image_1')->move($destinationPath, "$newfile.$filename");
+			}
 
-		if ($validator->fails())
-		{
-			return Redirect::back()->withErrors($validator)->withInput();
-		}
-
-		Info::create($data);
+			Info::create(array(
+					'name' => Input::get('name'),
+					'image_1' => "$newfile.$filename",
+					));
 
 		return Redirect::route('infos.index');
 	}
@@ -52,8 +57,9 @@ class InfosController extends \BaseController {
 	public function show($id)
 	{
 		$info = Info::findOrFail($id);
+		$infos = Info::all();
 
-		return View::make('infos.show', compact('info'));
+		return View::make('infos.show', compact('info', 'infos'));
 	}
 
 	/**

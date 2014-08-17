@@ -1,1 +1,8 @@
-F:\PHP\htdocs\Harris\app/views/vaults/show.blade.php
+@extends('layouts.master')
+
+@section('content')
+{{$vault->name}}
+
+<img src="//localhost/Harris/public/images/{{$vault->image_1}}">
+
+@stop

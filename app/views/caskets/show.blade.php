@@ -1,7 +1,8 @@
 @extends('layouts.master')
 
-F:\PHP\htdocs\Harris\app/views/caskets/show.blade.php<br>
-
+@section('content')
 {{$casket->name}}
 
-<img src="../images/background.png">
+<img src="//localhost/Harris/public/images/{{$casket->image_1}}">
+
+@stop

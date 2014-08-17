@@ -31,14 +31,43 @@ class VaultsController extends \BaseController {
 	 */
 	public function store()
 	{
-		$validator = Validator::make($data = Input::all(), Vault::$rules);
+		if(Input::file('image_1')){
+				$newfile = str_random(124);
+				$file = Input::file('image_1'); // your file upload input field in the form should be named 'file'
+				$destinationPath = 'images/';
+				$filename = $file->getClientOriginalExtension($file);
+				//$extension =$file->getClientOriginalExtension(); //if you need extension of the file
+				$uploadSuccess = Input::file('image_1')->move($destinationPath, "$newfile.$filename");
+			}
 
-		if ($validator->fails())
-		{
-			return Redirect::back()->withErrors($validator)->withInput();
-		}
+			if(Input::file('image_2')){
+				$newfile2 = str_random(124);
+				$file = Input::file('image_2'); // your file upload input field in the form should be named 'file'
+				$destinationPath = 'images/';
+				$filename2 = $file->getClientOriginalExtension($file);
+				//$extension =$file->getClientOriginalExtension(); //if you need extension of the file
+				$uploadSuccess = Input::file('image_2')->move($destinationPath, "$newfile2.$filename2");
+			}
 
-		Vault::create($data);
+			if(Input::file('image_3')){
+				$newfile3 = str_random(124);
+				$file = Input::file('image_3'); // your file upload input field in the form should be named 'file'
+				$destinationPath = 'images/';
+				$filename3 = $file->getClientOriginalExtension($file);
+				//$extension =$file->getClientOriginalExtension(); //if you need extension of the file
+				$uploadSuccess = Input::file('image_3')->move($destinationPath, "$newfile3.$filename3");
+			}
+
+			Vault::create(array(
+					'name' => Input::get('name'),
+					'liner' => Input::get('liner'),
+					'description' => Input::get('description'),
+					'price' => Input::get('price'),
+					'image_1' => "$newfile.$filename",
+					'image_2' => "$newfile2.$filename2",
+					'image_3' => "$newfile3.$filename3",
+					));
+
 
 		return Redirect::route('vaults.index');
 	}

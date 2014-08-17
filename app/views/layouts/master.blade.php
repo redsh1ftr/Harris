@@ -33,7 +33,8 @@
 			border-bottom-left-radius:16px;
 			top: 15px;
 			left:1%;
-			width: 20%;
+			width: 250px;
+			min-width: 20%
 			height: auto;
 			position: fixed;
 			float:right;

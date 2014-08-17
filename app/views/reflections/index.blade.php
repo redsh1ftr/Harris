@@ -7,7 +7,9 @@
 <div class="sidebar">
 @foreach($reflections as $reflect)
 
-	{{link_to_action('ReflectionsController@show', $reflect->name, $reflect->id)}}<br>
+	<a href="//localhost/Harris/public/reflections/{{$reflect->id}}">
+	<img height="100px" width="100px" src="//localhost/Harris/public/images/{{$reflect->image_1}}"></a>
+
 
 @endforeach
 

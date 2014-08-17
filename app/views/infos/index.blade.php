@@ -4,10 +4,12 @@
 
 
 
-<div class="sidebar"
+<div class="sidebar">
 @foreach($infos as $info)
 
-	{{link_to_action('InfosController@show', $info->name, $info->id)}}<br>
+	<a href="//localhost/Harris/public/infos/{{$info->id}}">
+	<img height="100px" width="100px" src="//localhost/Harris/public/images/{{$info->image_1}}"></a>
+	
 @endforeach
 </div>
 @stop

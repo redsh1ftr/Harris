@@ -123,7 +123,6 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
 		'Maatwebsite\Excel\ExcelServiceProvider',
-		'Intervention\Image\ImageServiceProvider',
 	
 
 	),
@@ -193,7 +192,6 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 		'Excel' => 'Maatwebsite\Excel\Facades\Excel',
-		'Image' => 'Intervention\Image\Facades\Image',
 	),
 
 );

@@ -4,7 +4,7 @@
 			position:relative;
 			margin-top:8%;
 			margin-left:30%;
-			background-image: url('//localhost/Harris/public/images/{{$inf->image_1}}');
+			background-image: url('//localhost/Harris/public/images/{{$info->image_1}}');
 			background-size: 40%;
 			background-repeat: no-repeat;
 			height:70%;

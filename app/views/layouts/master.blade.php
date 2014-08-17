@@ -36,7 +36,7 @@
 			width: 250px;
 			min-width: 20%
 			height: auto;
-			position: fixed;
+			position: absolute;
 			float:right;
 			text-align: center;
 			color:#000000;
@@ -63,7 +63,7 @@
 			position: relative;
 			text-align: center;
 			color:#000000;
-			background-color: #ffffff;
+			background-color: transparent;
 		}
 
 

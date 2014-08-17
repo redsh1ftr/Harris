@@ -5,7 +5,9 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"maatwebsite/excel": "dev-master"
+		"maatwebsite/excel": "dev-master",
+		"intervention/image": "2.*"
+		
 	},
 	
 	"require-dev": {

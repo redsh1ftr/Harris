@@ -5,6 +5,27 @@
 	<title>RG & GR Harris</title>
 	<style>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="//localhost/Harris/jQ/jquery.gallerie.js"></script>
+		<link rel="stylesheet" type="text/css" href="//localhost/Harris/jQ/gallerie.css"/>
+		<link rel="stylesheet" type="text/css" href="//localhost/Harris/jQ/gallerie-effects.css"/>
+
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('#gallery').gallerie();
+		});
+
+		</script>
+	
+	#gallery {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+
+
+
 		.layout{
 			height: 100%;
 			width: 100%;
@@ -14,6 +35,16 @@
 			position: absolute;
 			left:0px;
 			top:0px;
+		}
+
+		.createlink {
+			position: relative;
+			float:right;
+			height:auto;
+			width: auto;
+			background-color: transparent;
+			color:#ffffff;
+			font-size: 6px;
 		}
 
 			.button {
@@ -28,7 +59,6 @@
 				-moz-border-radius:6px;
 				-webkit-border-radius:6px;
 				border-radius:6px;
-			
 				display:inline-block;
 				cursor:pointer;
 				width: 80%;
@@ -55,6 +85,23 @@
 				top:1px;
 			}
 
+		.content {
+			position: relative;
+			top:20px;
+			height:70%;
+			width: 70%;
+			max-width: 70%;
+			left:1%;
+		}
+
+		.main-image {
+	      width: 380px;
+	      margin-bottom: 0.75em;
+	    }
+	    .thumbnails li {
+	      display: inline;
+	      margin: 0 10px 0 0;
+	    }
 		
 
 		.topbar {
@@ -70,15 +117,18 @@
 			-webkit-border-bottom-left-radius:16px;
 			-moz-border-radius-bottomleft:16px;
 			border-bottom-left-radius:16px;
-			top: 15px;
+			top: 1px;
 			left:1%;
 			width: 40%;
 			min-width: 20%
 			height: auto;
-			position: absolute;
-			float:right;
+			position: relative;
 			text-align: center;
 			background-color: transparent;
+		}
+
+		.table1 {
+			-webkit-column-count:3;
 		}
 
 		.sidebar {
@@ -94,7 +144,7 @@
 			-webkit-border-bottom-left-radius:16px;
 			-moz-border-radius-bottomleft:16px;
 			border-bottom-left-radius:16px;
-			top: 80px;
+			top: 20px;
 			left:1%;
 			width: 20%;
 			height: auto;
@@ -115,6 +165,9 @@
 </head>
 
 <div class="layout">
+	<div class="createlink">
+		@yield('create')
+	</div>
 
 	<div class="topbar">
 		<table width="100%">
@@ -124,5 +177,8 @@
 			<td><a class="button"{{link_to_action('ReflectionsController@index', 'Lifes Reflections')}}
 		</table>
 	</div>
-@yield('content')
+
+	<div class="content">
+		@yield('content')
+	</div>
 </div>

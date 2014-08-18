@@ -2,6 +2,10 @@
 @extends('layouts.reflections')
 
 
+@section('create')
+	<div style="font-size:12px">{{link_to_action('ReflectionsController@edit', '+')}}</div><br>
+@stop
+
 @section('content')
 
 <div class="sidebar">

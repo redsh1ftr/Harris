@@ -1,11 +1,27 @@
 @extends('layouts.master')
 
 @section('content')
-{{$casket->name}}
 
-	<a href="//localhost/Harris/public/infos/{{$casket->id}}">
-	<img height="100px" width="100px" src="//localhost/Harris/public/images/{{$casket->image_1}}"></a>
+  <div class="main-image">
+  	<a href="//localhost/Harris/public/caskets/{{$casket->id+1}}">
+    <img src="//localhost/Harris/public/images/{{$casket->image_1}}" alt="Placeholder" class="custom"></a>
+  </div>
 
-<img src="//localhost/Harris/public/images/{{$casket->image_1}}">
+  <ul class="thumbnails">
+    <li><a href="//localhost/Harris/public/images/{{$casket->image_1}}"><img height="100px" width="100px" src="//localhost/Harris/public/images/{{$casket->image_1}}" alt="Thumbnails"></a></li>
+    <li><a href="//localhost/Harris/public/images/{{$casket->image_2}}"><img height="100px" width="100px" src="//localhost/Harris/public/images/{{$casket->image_2}}" alt="Thumbnails"></a></li>
+    <li><a href="//localhost/Harris/public/images/{{$casket->image_3}}"><img height="100px" width="100px" src="//localhost/Harris/public/images/{{$casket->image_3}}" alt="Thumbnails"></a></li>
+  </ul>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//localhost/Harris/jQ/jquery.simpleGal.js"></script>
+  <script>
+  $(document).ready(function () {
+    $('.thumbnails').simpleGal({
+      mainImage: '.custom'
+    });
+  });
+  </script>
+
 
 @stop

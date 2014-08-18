@@ -1,10 +1,12 @@
 @extends('layouts.master')
 
+@section('create')
+	<div style="font-size:12px">{{link_to_action('VaultsController@create', '+')}}</div><br>
+@stop
+
 @section('content')
 
 
-
-<br><br><br>
 @foreach($vaults as $vault)
 
 

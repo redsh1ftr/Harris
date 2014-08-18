@@ -1,6 +1,9 @@
 @extends('layouts.master')
 @extends('layouts.infos')
 
+@section('create')
+	<div style="font-size:12px">{{link_to_action('InfosController@edit', '+')}}</div><br>
+@stop
 
 @section('content')
 

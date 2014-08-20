@@ -15,16 +15,22 @@ class CreateCasketsTable extends Migration {
 		Schema::create('caskets', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('product_id');
 			$table->string('name');
+			$table->string('type');
+			$table->string('casket_number');
+			$table->string('shell');
 			$table->string('interior');
 			$table->string('material');
 			$table->string('manufacturer');
-			$table->integer('group');
-			$table->integer('price');
-			$table->integer('cost');
+			$table->string('group');
+			$table->string('price');
+			$table->string('cost');
+			$table->string('size');
 			$table->text('notes');
 			$table->string('panel');
 			$table->string('vault_size');
+			$table->string('interior_dimensions');
 			$table->string('image_1');
 			$table->string('image_2');
 			$table->string('image_3');

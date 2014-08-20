@@ -28,11 +28,6 @@
 			font-size: 6px;
 		}
 
-		.create {
-			color:#f0f0f0;
-			font-size: 30px;
-		}
-
 
 			.button {
 				background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, transparent), color-stop(1, #dfdfdf));
@@ -167,5 +162,6 @@
 
 	<div class="content">
 		@yield('content')
+		@yield('gallery')
 	</div>
 </div>

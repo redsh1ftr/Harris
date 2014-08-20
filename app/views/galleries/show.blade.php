@@ -1,0 +1,1 @@
+F:\PHP\htdocs\Harris\app/views/galleries/show.blade.php

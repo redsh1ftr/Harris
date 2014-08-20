@@ -1,11 +1,17 @@
 @extends('layouts.master')
 
+@section('create')
+<a href="//localhost/Harris/public/caskets/{{$casket->id}}/edit"><div class="create">+</div></a>
+@stop
+
 @section('content')
 
   <div class="main-image">
   	<a href="//localhost/Harris/public/caskets/{{$casket->id+1}}">
-    <img src="//localhost/Harris/public/images/{{$casket->image_1}}" alt="Placeholder" class="custom"></a>
+    <img src="//localhost/Harris/public/images/{{$casket->image_1}}" height="300%" width="300%" alt="Placeholder" class="custom"></a>
   </div>
+
+
 
   <ul class="thumbnails">
     <li><a href="//localhost/Harris/public/images/{{$casket->image_1}}"><img height="100px" width="100px" src="//localhost/Harris/public/images/{{$casket->image_1}}" alt="Thumbnails"></a></li>
@@ -22,6 +28,8 @@
     });
   });
   </script>
+
+
 
 
 @stop

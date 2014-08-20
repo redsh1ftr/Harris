@@ -1,3 +1,6 @@
+@extends('layouts.master')
+
+@section('content')
 <table>
 {{ Form::open(array('action' => 'CasketsController@store', 'files' => true)) }}
 
@@ -12,8 +15,8 @@
 <td>{{Form::label('panel', 'Panel')}}<td>{{Form::text('panel')}}<tr>
 <td>{{Form::label('vault_size', 'Vault Size')}}<td>{{Form::text('vault_size')}}<tr>
 <td>{{Form::label('image_1', 'Main Image')}}<td>{{Form::file('image_1')}}<tr>
-<td>{{Form::label('image_2', 'Interior Image')}}<td>{{Form::file('image_2')}}<tr>
-<td>{{Form::label('image_3', 'Optional Image')}}<td>{{Form::file('image_3')}}<tr>
+<td>{{Form::label('image_2', 'Backpanel')}}<td>{{Form::file('image_2')}}<tr>
+<td>{{Form::label('image_3', 'Hardware')}}<td>{{Form::file('image_3')}}<tr>
 
 </table>
 
@@ -22,3 +25,5 @@
 {{Form::submit('submit')}}<br>
 
 {{Form::close()}}
+
+@stop

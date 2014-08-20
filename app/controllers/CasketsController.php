@@ -9,7 +9,7 @@ class CasketsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$caskets = Casket::all();
+		$caskets = Casket::paginate(5)->all();
 
 		return View::make('caskets.index', compact('caskets'));
 	}
@@ -96,6 +96,7 @@ class CasketsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
+
 	public function edit($id)
 	{
 		$casket = Casket::find($id);
@@ -109,18 +110,60 @@ class CasketsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update()
 	{
-		$casket = Casket::findOrFail($id);
+		$casket = Casket::where('id', '=', Input::get('id'))->first();
 
-		$validator = Validator::make($data = Input::all(), Casket::$rules);
+		if(Input::file('image_1')){
+				$newfile = str_random(124);
+				$file = Input::file('image_1'); // your file upload input field in the form should be named 'file'
+				$destinationPath = 'images/';
+				$filename = $file->getClientOriginalExtension($file);
+				//$extension =$file->getClientOriginalExtension(); //if you need extension of the file
+				$uploadSuccess = Input::file('image_1')->move($destinationPath, "$newfile.$filename");
+				$casket->image_1 = "$newfile.$filename";
+			}
 
-		if ($validator->fails())
-		{
-			return Redirect::back()->withErrors($validator)->withInput();
-		}
+			if(Input::file('image_2')){
+				$newfile2 = str_random(124);
+				$file = Input::file('image_2'); // your file upload input field in the form should be named 'file'
+				$destinationPath = 'images/';
+				$filename2 = $file->getClientOriginalExtension($file);
+				//$extension =$file->getClientOriginalExtension(); //if you need extension of the file
+				$uploadSuccess = Input::file('image_2')->move($destinationPath, "$newfile2.$filename2");
+				$casket->image_2 = "$newfile2.$filename2";
+			}
 
-		$casket->update($data);
+			if(Input::file('image_3')){
+				$newfile3 = str_random(124);
+				$file = Input::file('image_3'); // your file upload input field in the form should be named 'file'
+				$destinationPath = 'images/';
+				$filename3 = $file->getClientOriginalExtension($file);
+				//$extension =$file->getClientOriginalExtension(); //if you need extension of the file
+				$uploadSuccess = Input::file('image_3')->move($destinationPath, "$newfile3.$filename3");
+				$casket->image_3 = "$newfile3.$filename3";
+			}
+
+			
+					$casket->name = Input::get('name');
+					$casket->interior = Input::get('interior');
+					$casket->material = Input::get('material');
+					$casket->manufacturer = Input::get('manufacturer');
+					$casket->group = Input::get('group');
+					$casket->price = Input::get('price');
+					$casket->cost = Input::get('cost');
+					$casket->notes = Input::get('notes');
+					$casket->panel = Input::get('panel');
+					$casket->vault_size = Input::get('vault_size');
+					
+					
+					
+					
+
+
+				$casket->save();
+
+
 
 		return Redirect::route('caskets.index');
 	}

@@ -24,3 +24,5 @@ Route::resource('vaults', 'VaultsController');
 Route::resource('infos', 'InfosController');
 
 Route::resource('reflections', 'ReflectionsController');
+
+Route::post('/caskets/update/do', array('as' => 'update_casket', 'uses' => 'CasketsController@update'));

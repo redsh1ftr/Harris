@@ -48,7 +48,7 @@ Released under MIT LICENSE
 				$imageBox = $('<div class="gallerie-imagebox"/>'),
 				$image = $('<img class="gallerie-image"/>'),
 				$imageLoading = $('<div class="gallerie-loading"/>'),
-				$captionBox = $('<div class="gallerie-captionbox"><div class="gallerie-control gallerie-control-previous">&laquo;</div><div class="gallerie-text"><div class="gallerie-title"/><div class="gallerie-price"></div><div class="gallerie-index"/></div><div class="gallerie-control gallerie-control-next">&raquo;</div></div>'),
+				$captionBox = $('<div class="gallerie-captionbox"><div class="gallerie-control gallerie-control-previous">&laquo;</div><div class="gallerie-text"><div class="gallerie-title"/><div class="gallerie-index"/></div><div class="gallerie-control gallerie-control-next">&raquo;</div></div>'),
 				$thumbList = $('<ul></ul>'),
 				$thumbBox = $('<div class="gallerie-thumbbox"/>'),
 				$thumbItem,
@@ -67,8 +67,7 @@ Released under MIT LICENSE
 								}).append(
 									$('<img/>').prop({
 										src: $thumbItem.prop('src'),
-										title: $thumbItem.prop('title'), 
-										price: $thumbItem.prop('price')
+										title: $thumbItem.prop('title') 
 									})
 								)
 							);
@@ -322,7 +321,6 @@ Released under MIT LICENSE
 						$overlay = $this.find('.gallerie-overlay'),
 						$thumbBox = $this.find('.gallerie-thumbbox'),
 						$captionBox = $this.find('.gallerie-captionbox'),
-						$price = $this.find('.gallerie-price'),
 						$thumbList = $thumbBox.find('ul:first'),
 						linkType = $.type(imageLink),
 						$imageLink,

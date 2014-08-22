@@ -32,7 +32,8 @@ return array(
 	|--------------------------------------------------------------------------
 	| Database Connections
 	|--------------------------------------------------------------------------
-	|
+	|//harrisadmin
+	|//LOL!@#lol123
 	| Here are each of the database connections setup for your application.
 	| Of course, examples of configuring each database platform that is
 	| supported by Laravel is shown below to make development simple.
@@ -54,10 +55,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'harris',
-			'username'  => 'root',
-			'password'  => '',
+			'host'      => '97.74.149.131',
+			'database'  => 'harrisadmin',
+			'username'  => 'harrisadmin',
+			'password'  => 'LOL!@#lol123',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

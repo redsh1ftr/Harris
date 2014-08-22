@@ -1,4 +1,6 @@
-F:\PHP\htdocs\Harris\app/views/reflections/edit.blade.php
+@extends('layouts.master')
+
+@section('content')
 
 
 {{ Form::model($reflection, array('action' => 'ReflectionsController@update', 'files' => true)) }}
@@ -11,3 +13,5 @@ F:\PHP\htdocs\Harris\app/views/reflections/edit.blade.php
 {{Form::submit('submit')}}<br>
 
 {{Form::close()}}
+
+@stop

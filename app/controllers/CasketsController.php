@@ -9,7 +9,7 @@ class CasketsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$caskets = Casket::paginate(5)->all();
+		$caskets = Casket::paginate(15)->all();
 
 		return View::make('caskets.index', compact('caskets'));
 	}

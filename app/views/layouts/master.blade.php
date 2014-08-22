@@ -10,12 +10,13 @@
 		.layout{
 			height: 100%;
 			width: 100%;
-			background-image: url('//localhost/Harris/public/images/background.png');
+			background-image: url('http://www.precisemaintenance.com/Harris/public/images/background.png');
 			background-repeat: no-repeat;
 			background-size: 85%;
 			position: absolute;
 			left:0px;
 			top:0px;
+			overflow: scroll;
 		}
 
 		.createlink {
@@ -106,7 +107,7 @@
 			border-bottom-left-radius:16px;
 			top: 1px;
 			left:1%;
-			width: 40%;
+			width: 50%;
 			min-width: 20%
 			height: auto;
 			position: relative;

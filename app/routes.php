@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', array('uses'=> 'CasketsController@index'));
 
 
 Route::resource('caskets', 'CasketsController');

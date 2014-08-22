@@ -1,4 +1,6 @@
-F:\PHP\htdocs\Harris\app/views/reflections/create.blade.php
+@extends('layouts.master')
+
+@section('content')
 
 {{ Form::open(array('action' => 'ReflectionsController@store', 'files' => true)) }}
 
@@ -10,3 +12,5 @@ F:\PHP\htdocs\Harris\app/views/reflections/create.blade.php
 {{Form::submit('submit')}}<br>
 
 {{Form::close()}}
+
+@stop

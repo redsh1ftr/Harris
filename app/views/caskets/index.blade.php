@@ -9,9 +9,9 @@
 
 
 
-    <link rel="stylesheet" type="text/css" href="//localhost/Harris/jQ/Ela/css/default.css" />
-    <link rel="stylesheet" type="text/css" href="//localhost/Harris/jQ/Ela/css/component.css" />
-    <script src="//localhost/Harris/jQ/Ela/js/modernizr.custom.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.precisemaintenance.com/Harris/jQ/Ela/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.precisemaintenance.com/Harris/jQ/Ela/css/component.css" />
+    <script src="http://www.precisemaintenance.com/Harris/jQ/Ela/js/modernizr.custom.js"></script>
   </head>
   <body>
     <div class="container">
@@ -20,11 +20,20 @@
           <ul>
             @foreach($caskets as $casket)
             <li id="{{$casket->id}}">
-              <h3><a href="//localhost/Harris/public/caskets/{{$casket->id}}">{{$casket->name}}</a></h3>
+              <h3><a href="http://www.precisemaintenance.com/Harris/public/caskets/{{$casket->id}}">{{$casket->name}}</a></h3>
               <div>
                 <div class="cbp-content">
-                  <p><img src="//localhost/Harris/public/images/{{$casket->image_1}}"></p>
-                  <p>{{$casket->price}}</p>
+                  <p><img height="70%" width="70%" src="http://www.precisemaintenance.com/Harris/public/images/{{$casket->image_1}}"><img height="70%" width="70%" src="http://www.precisemaintenance.com/Harris/public/images/{{$casket->image_2}}"></p>
+                  <p><img height="70%" width="70%" src="http://www.precisemaintenance.com/Harris/public/images/{{$casket->image_3}}"></p>
+                  <p>
+                    <table width="100%">
+                      <td>Material<td>{{$casket->material}}<tr>
+                      <td>Shell<td>{{$casket->shell}}<tr>
+                      <td>Interior<td>{{$casket->interior}}<tr>
+                      <td>Manufacturer<td>{{$casket->manufacturer}}<tr>
+                      <td>Price<td>{{$casket->price}}
+                  </table>
+                  </p>
                 </div>
               </div>
             </li>
@@ -32,14 +41,14 @@
           </ul>
           <nav>
             @foreach($caskets as $casket)
-            <a href="#{{$casket->id}}"><span><img src="//localhost/Harris/public/images/{{$casket->image_1}}" height="50px" width="50px"></span></a>
+            <a href="#{{$casket->id}}"><span><img src="http://www.precisemaintenance.com/Harris/public/images/{{$casket->image_1}}" height="50px" width="50px"></span></a>
              @endforeach
           </nav>
         </div>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="//localhost/Harris/jQ/Ela/js/jquery.cbpContentSlider.min.js"></script>
+    <script src="http://www.precisemaintenance.com/Harris/jQ/Ela/js/jquery.cbpContentSlider.min.js"></script>
     <script>
       $(function() {
         /*

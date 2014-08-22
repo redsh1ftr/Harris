@@ -9,9 +9,9 @@
 
 
 
-    <link rel="stylesheet" type="text/css" href="//localhost/Harris/jQ/Ela/css/default.css" />
-    <link rel="stylesheet" type="text/css" href="//localhost/Harris/jQ/Ela/css/component.css" />
-    <script src="//localhost/Harris/jQ/Ela/js/modernizr.custom.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.precisemaintenance.com/Harris/jQ/Ela/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.precisemaintenance.com/Harris/jQ/Ela/css/component.css" />
+    <script src="http://www.precisemaintenance.com/Harris/jQ/Ela/js/modernizr.custom.js"></script>
   </head>
   <body>
     <div class="container">
@@ -23,7 +23,7 @@
               <h3>{{$vault->name}}</h3>
               <div>
                 <div class="cbp-content">
-                  <p><img src="//localhost/Harris/public/images/{{$vault->image_1}}"></p>
+                  <p><img src="http://www.precisemaintenance.com/Harris/public/images/{{$vault->image_1}}"></p>
                   <p>{{$vault->price}}</p>
                 </div>
               </div>
@@ -32,14 +32,14 @@
           </ul>
           <nav>
             @foreach($vaults as $vault)
-            <a href="#{{$vault->id}}"><span><img src="//localhost/Harris/public/images/{{$vault->image_1}}" height="50px" width="50px"></span></a>
+            <a href="#{{$vault->id}}"><span><img src="http://www.precisemaintenance.com/Harris/public/images/{{$vault->image_1}}" height="50px" width="50px"></span></a>
              @endforeach
           </nav>
         </div>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="//localhost/Harris/jQ/Ela/js/jquery.cbpContentSlider.min.js"></script>
+    <script src="http://www.precisemaintenance.com/Harris/jQ/Ela/js/jquery.cbpContentSlider.min.js"></script>
     <script>
       $(function() {
         /*

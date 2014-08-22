@@ -1,5 +1,5 @@
-F:\PHP\htdocs\Harris\app/views/reflections/create.blade.php
-
+@extends('layouts.master')
+@section('content')
 {{ Form::open(array('action' => 'InfosController@store', 'files' => true)) }}
 
 {{ Form::text('name') }}<br>
@@ -10,3 +10,5 @@ F:\PHP\htdocs\Harris\app/views/reflections/create.blade.php
 {{Form::submit('submit')}}<br>
 
 {{Form::close()}}
+
+@stop

@@ -12,8 +12,8 @@
 	
 	
 
-	<a href="//localhost/Harris/public/infos/{{$inf->id}}">
-	<img height="100px" width="100px" src="//localhost/Harris/public/images/{{$inf->image_1}}"></a>
+	<a href="http://www.precisemaintenance.com/Harris/public/infos/{{$inf->id}}">
+	<img height="100px" width="100px" src="http://www.precisemaintenance.com/Harris/public/images/{{$inf->image_1}}"></a>
 
 @endforeach
 
